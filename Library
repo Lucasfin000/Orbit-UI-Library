@@ -96,6 +96,15 @@ function Ripple(obj)
 	end)
 end
 
+function library:Destroy()
+    for i, v in pairs(game.CoreGui:GetDescendants()) do
+        if v.Name == "shadow" then
+            getgenv().con:Disconnect()
+            v.Parent.Parent:Destroy()
+        end
+    end
+end
+
 function library:Window(grad1, grad2, name)
     local OrbitLibraryClean = Instance.new("ScreenGui")
     local Main = Instance.new("Frame")
@@ -114,6 +123,8 @@ function library:Window(grad1, grad2, name)
     local UICorner_4 = Instance.new("UICorner")
     local UIListLayout_2 = Instance.new("UIListLayout")
     local shadow = Instance.new("ImageLabel")
+
+
 
 
 
