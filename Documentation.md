@@ -88,3 +88,8 @@ tab:Textbox("test textbox", "test placeholder", function(text)
 end)
 ```
 
+
+## Destroying the UI
+```lua
+lib:Destroy()
+```
