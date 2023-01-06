@@ -47,7 +47,7 @@ end)
 ```lua
 Slider:Set(2)
 ```
-Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
+
 
 
 ## Creating a Label
