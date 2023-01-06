@@ -96,7 +96,7 @@ function Ripple(obj)
 	end)
 end
 
-function library:Window(grad1, grad2)
+function library:Window(grad1, grad2, name)
     local OrbitLibraryClean = Instance.new("ScreenGui")
     local Main = Instance.new("Frame")
     local TopBar = Instance.new("Frame")
@@ -163,7 +163,11 @@ function library:Window(grad1, grad2)
     TextLabel.Position = UDim2.new(0.0147368424, 0, 0, 0)
     TextLabel.Size = UDim2.new(0, 388, 0, 32)
     TextLabel.Font = Enum.Font.GothamBold
-    TextLabel.Text = "Orbit Library"
+    if name then
+        TextLabel.Text = name
+    else
+        TextLabel.Text = "Orbit Library"
+    end
     TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel.TextSize = 14.000
     TextLabel.TextXAlignment = Enum.TextXAlignment.Left
